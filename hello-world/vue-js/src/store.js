@@ -5,10 +5,24 @@ Vue.use(Vuex)
 /* eslint-disable */
 
 export default new Vuex.Store({
-    module: {
-        m: {
+    modules: {
+        ma: {
             state: {
                 name: 'zhangsan'
+            }
+        },
+        a: {
+            state: {
+                x: 1,
+            },
+            mutations: { 
+                syncAdd (state, payload) {
+                    console.log('module-a-syncAdd payload', payload);
+                    state.age += payload;
+                },
+                syncMinus (state, payload) {
+                    state.age -= payload;
+                }
             }
         }
     },

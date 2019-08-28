@@ -18,6 +18,8 @@
             我的年龄是
             <span id="tmp"></span>
         </p>
+
+        <p>{{this.$store.state.a.x}}</p>
     </div>
 </template>
 
