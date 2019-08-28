@@ -58,8 +58,9 @@ class Store {
         _forEach(getters, (getterName, value) => {
             Object.defineProperty(this.getters, getterName, {
                 get: () => {
-                return value(this.state);
-                }
+                    return value(this.state)
+                },
+                enumerable: true 
             });
         });
 

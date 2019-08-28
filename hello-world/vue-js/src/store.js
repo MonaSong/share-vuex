@@ -5,6 +5,13 @@ Vue.use(Vuex)
 /* eslint-disable */
 
 export default new Vuex.Store({
+    module: {
+        m: {
+            state: {
+                name: 'zhangsan'
+            }
+        }
+    },
     state: {
         age: 10
     },
