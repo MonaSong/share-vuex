@@ -61,7 +61,7 @@ export default {
             })
 
             setTimeout(function () {
-                document.getElementById('tmp').innerHTML = 20;
+                obj.a = 20;
             }, 3000)
         }
     }
