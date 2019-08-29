@@ -18,6 +18,7 @@ class ModuleConnection {
     }
 
     register(path, rootModule) {
+        debugger;
         let newModule = {
             _raw: rootModule,
             _children: {},
@@ -44,6 +45,7 @@ class ModuleConnection {
 
 const installModule = (store, state, path, rootModule) => {
 
+        debugger;
 
         if(path.length > 0) {
             let parent = path.slice(0, -1).reduce((state, current)=>{
@@ -68,7 +70,7 @@ const installModule = (store, state, path, rootModule) => {
     let mutations = rootModule._raw.mutations;
     if(mutations) {
         _forEach(mutations, (mutationName, fn) => {
-            let arr = store.mutations[mutationName] || (store.mutations[mutationName]= []);
+            let arr = store.mutations[mutationName] || (store.mutations[mutationName] = []);
             arr.push((payload) => {
                 fn(rootModule.state, payload);
             });

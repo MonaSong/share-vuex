@@ -38,7 +38,7 @@ export default new Vuex.Store({
     },
     getters: {
         myAge(state) {
-            return state.age += 10;
+            return state.age + 10;
         }
     },
     mutations: {

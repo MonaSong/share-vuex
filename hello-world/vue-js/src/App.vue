@@ -8,7 +8,7 @@
 
         <h4>{{this.$store.state.age}}</h4>
 
-        <!-- <h4>当前我的年龄 <strong>{{this.$store.getters.myAge}}</strong></h4> -->
+        <h4>当前我的年龄 <strong>{{this.$store.getters.myAge}}</strong></h4>
 
         <button @click="add">同步 点击按钮增加10岁</button>
 
